@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>STI_The_Complete_Saga.ico</file>
+        <file>jaime.ico</file>
+        <file>dani.ico</file>
+        <file>alfon_bS8_icon.ico</file>
+        <file>jesus_sf2_icon.ico</file>
+        <file>paco_6jg_icon.ico</file>
+        <file>1493288_help_about_question_icon.ico</file>
+    </qresource>
+</RCC>
