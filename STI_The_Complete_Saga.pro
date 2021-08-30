@@ -20,6 +20,9 @@ FORMS += \
 #icono de la app, USAR IMAGENES PNG DE 512px Y CONVERTIR A ICONOS DE 48px
 RC_ICONS = STI_The_Complete_Saga.ico
 
+#necesario para el qsystemtrayicon (segundo plano y notis)
+QMAKE_CXXFLAGS += -std=gnu++14
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
