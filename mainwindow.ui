@@ -319,10 +319,10 @@
      <normaloff>:/icons/hector_Nyt_icon.ico</normaloff>:/icons/hector_Nyt_icon.ico</iconset>
    </property>
    <property name="text">
-    <string>Hector</string>
+    <string>HÉCTOR</string>
    </property>
    <property name="toolTip">
-    <string>Héctor</string>
+    <string>HÉCTOR</string>
    </property>
    <property name="shortcut">
     <string>F7</string>

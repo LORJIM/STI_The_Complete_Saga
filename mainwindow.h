@@ -23,8 +23,25 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_actionDani_triggered();
+
+    void on_actionJaime_triggered();
+
+    void on_actionJesucristo_triggered();
+
+    void on_actionAlfonso_triggered();
+
+    void on_actionPaco_triggered();
+
+    void on_actionRoberto_triggered();
+
+    void on_actionDJ_Azael_triggered();
+
+    void on_actionHector_triggered();
+
 private:
     Ui::MainWindow *ui; //los * son punteros, como referencias para llamar a estas propiedades en el cpp
     QSystemTrayIcon *mSystemTrayIcon; //esto es para que salga abajo a la derecha como app en segundo plano y para notificaciones
+    void loadSubWindow(QDialog *widget); //funcion que muestra las modales de pjs (custom dialogs)
 };
 #endif // MAINWINDOW_H

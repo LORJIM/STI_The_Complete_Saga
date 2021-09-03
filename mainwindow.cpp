@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "modalpj.h"
+#include "sti3.h"
 #include <QMessageBox>
 #include <QSystemTrayIcon>
 #include <QCloseEvent>
@@ -9,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
     //mostrar un qmessagebox que nos pregunte si queremos utilizar el asistente,
     //usar bajo propio riesgo para activar o desactivar a dani
 
@@ -39,8 +43,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     //A PACO PONERLE MUSICA DE TOROS DE FONDO
-
-    //LOS PERSONAJES PODRIAN LLEVARNOS A UNA MODAL QMDIAREA CON UNA FOTO SUYA Y DESCRIPCION
 }
 
 MainWindow::~MainWindow()
@@ -82,6 +84,60 @@ void MainWindow::closeEvent(QCloseEvent *e){ //mensaje de confirmacion antes de 
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    STI3 *sti3=new STI3();
+    sti3->show();
+}
 
+
+void MainWindow::on_actionDani_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"2")); //en la creacion de la modal pasamos la ID para hacer la query de datos
+}
+
+void MainWindow::loadSubWindow(QDialog *dialog){ //funcion para ahorrar codigo ya que esto lo haran todas las modales de PJs
+    dialog->setModal(true);
+    dialog->exec(); //carga la modal estandar sin info
+}
+
+
+void MainWindow::on_actionJaime_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"1"));
+}
+
+
+void MainWindow::on_actionJesucristo_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"4"));
+}
+
+
+void MainWindow::on_actionAlfonso_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"5"));
+}
+
+
+void MainWindow::on_actionPaco_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"6"));
+}
+
+
+void MainWindow::on_actionRoberto_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"9"));
+}
+
+
+void MainWindow::on_actionDJ_Azael_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"7"));
+}
+
+
+void MainWindow::on_actionHector_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"8"));
 }
 

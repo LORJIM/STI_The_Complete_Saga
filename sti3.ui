@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>STI3</class>
+ <widget class="QStackedWidget" name="STI3">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>940</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>940</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>STI 3: La Venganza de Jesús</string>
+  </property>
+  <widget class="QWidget" name="page">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>128</width>
+          <height>34</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Arco 1: Quality Telecom</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Arco 2: Eurodescontrol</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>380</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Arco 3: The Final Match</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>128</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="page_2">
+   <property name="minimumSize">
+    <size>
+     <width>640</width>
+     <height>480</height>
+    </size>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Arco 1: Quality Telecom</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>60</y>
+      <width>481</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Escenario: Quality Telecom, la empresa donde se encuentra Jaime NP. Programadores chiflados, ejecutivos inversores y pocas tías.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>100</y>
+      <width>461</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>En esta entrega, Jaime es destinado a Quality Telecom, donde empieza a vislumbrar su destino como un programador de éxito.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>500</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Listado de coñas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>500</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atrás</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="page_3">
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>90</y>
+      <width>461</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>En esta entrega, Amorós hace frente a las adversidades de Eurodescontrol y los planes malvados del consejo de profesores contra él.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Arco 2: Eurodescontrol</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>490</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Listado de coñas</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>481</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Escenario: Eurodescontrol, la empresa donde se encuentra Daniel Amorós. Gente puteada, un jefe cabrón y muchas tías buenas.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>200</y>
+      <width>541</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&quot;Menuda puta mierda, es que estoy muy asqueado y cabreado. Sólo deseo que se pasen estos tres meses rápido.&quot;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>250</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="text">
+     <string>---Amorós</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>250</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <strikeout>true</strikeout>
+     </font>
+    </property>
+    <property name="text">
+     <string>Big Smoke</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>250</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="text">
+     <string>sobre su estancia en Eurodescontrol</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>490</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atrás</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="page_4">
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Arco 3: The Final Match</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>580</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atrás</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>100</y>
+      <width>461</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Jaime NP y Big Smoke se juntan por última vez para hacer frente a The Final Match</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>60</y>
+      <width>481</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Escenario: los Dominios de Jesús, su castillo, el Satafi, donde Jorge y otros infelices aún cumplen condena.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>580</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>EPILOGO</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>130</y>
+      <width>601</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-La grabación de la graduación fue un desastre. jaime no se mueve, amoros no sabe hacer fotos a la gente, y la tarjeta de adri no funciona. ademas, uno de los chicos, indignado, se nego a hacerse la foto debido al pesimo trabajo del fotografo. &quot;haberla hecho antes!&quot;</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>180</y>
+      <width>461</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kozuka Gothic Pro M</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/paco_6jg_icon.ico&quot;/&gt;&lt;span style=&quot; color:#5500ff;&quot;&gt;RESULTADO DEL PROYECTO&lt;/span&gt;&lt;img src=&quot;:/icons/alfon_bS8_icon.ico&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>230</y>
+      <width>831</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-NADA SALIÓ
+-AL FINAL NOS QUEDÓ HECHO UN DESASTRE
+-EL WORD LO COPIAMOS LITERAL DE LOS PAVOS DEL AÑO PASADO
+-EL VIDEO DE LA GRADUACIÓN OTRA PUTA MIERDA
+-LAS TÍAS MUY BUENAS JODERRR… QUE RICO SÓLO NOS SIRVIÓ PARA CASCÁRNOSLA
+-NO SE LO VAMOS A DAR A SUS FAMILIAS
+-EL TEMBLEQUE DE MI COMPAÑERO
+-RETRANSMISIÓN EN DIRECTO NULA O INEXISTENTE
+-HICIMOS CUANTO PUDIMOS PERO EL DESTINO NO QUISO
+-PACO TRIGGERED
+-ATENTADO EN EL PROXY DE JESÚS (Y NO SALIÓ BIEN)
+-Y PAVO DE LA GRADUACIÓN SE OFENDIÓ PORQUE DANI NO LE HIZO LA MALDITA FOTO BIEN FUCKKKKK
+-MISSING MATE
+-LA GENTE QUIERE NUESTROS VÍDEOS CON TODA LA ILUSIÓN E INOCENCIA DEL MUNDO PERO LO QUE NO SABEN ES QUE ES UN FRACASO NO VAN A TENER NUNCA UN RECUERDO DE SUS HIJOS….
+-FAMILIARES ENTEROS DEMANDAN AL JEFE DEL PROYECTO, LO METEN A LA CÁRCEL POR PREVARICACIÓN DAÑOS Y PERJUICIOS Y MALVERSACIÓN DE LOS FONDOS DEL SATAFI PORQUE LAS CÁMARAS ERAN DEL IES LAGUNA
+-TODO SE DEMOSTRÓ EN EL JUICIO QUE ERA UN FRAUDE Y UN COMPLOT DE SUS 3 ALUMNOS PARA METERLE EN CHIRONA
+-PACO EXIGIÓ VENGANZA POR LOS HECHOS OCURRIDOS
+-JESÚS ACABÓ EN UNA RESIDENCIA DE LA TERCERA EDAD ADMINISTRANDO EL PROXY DE LA RESIDENCIA NEW HORIZONS
+</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="page_5">
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Kozuka Gothic Pro M</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#5500ff;&quot;&gt;EPÍLOGO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>70</y>
+      <width>611</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-LA SAGA STI3 TERMINA CON NUESTROS PROTAS GANANDO EL TÍTULO MUNDIAL DE FP
+-LOS PROFES ACABAN EN LA MIERDA ROBERTO KILLED JESUS RETIRED EN LA RESIDENCIA NEW HORIZONS Y PACO SUMIDO EN LA DESGRACIA CON UNA GRAN DEPRESIÓN POST TRAUMÁTICA
+-ABEL SE DEJA EL PELO DE KRUSTY Y ESTÁ BUSCANDO A HÉCTOR POR EL GLOBO DURANTE TODA LA ETERNIDAD Y VA PREGUNTANDO A LA GENTE, PERO NADIE LE HACE CASO
+-LE VES VIAJANDO POR LA INDIA, EN HONG KONG, EN EL TIBET, CON LOS OMATICAYA AVATAR 2, FINALMENTE LO ENCONTRÓ EN UNA CAVERNA DE LA ANTÁRTIDA, EN MEDIO DE LA VENTISCA INVERNAL, Y PUDO APROBARLE, ABEL HABÍA CUMPLIDO SU MISIÓN.
+-JORGE SE VA A LAS PRÁCTICAS SPIN-OFF TARDÍO PORQUE LA SAGA ORIGINAL YA TERMINÓ, NO SE RECAUDE MUCHO DINERO, ES MÁS LA SAGA SE CANCELA POR FALTA DE FONDOS
+</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_10">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>480</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atrás</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>Doraemonguer_y_sus_amijos.jpg</file>
+        <file>deporte.jpg</file>
+        <file>jaimeNP.jpg</file>
+    </qresource>
+</RCC>

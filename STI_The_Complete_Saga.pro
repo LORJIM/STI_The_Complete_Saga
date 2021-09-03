@@ -10,25 +10,36 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    modalpj.cpp \
+    sti3.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    modalpj.h \
+    sti3.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    modalpj.ui \
+    sti3.ui
 #icono de la app, USAR IMAGENES PNG DE 512px Y CONVERTIR A ICONOS DE 48px
 RC_ICONS = STI_The_Complete_Saga.ico
 
 #necesario para el qsystemtrayicon (segundo plano y notis)
 QMAKE_CXXFLAGS += -std=gnu++14
 
+#necesario para trabajar con SQL, agrega sus librerias
+QT += sql
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES +=
+DISTFILES += \
+    STI.db
 
 RESOURCES += \
-    iconos.qrc
+    iconos.qrc \
+    images.qrc
