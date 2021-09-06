@@ -1,5 +1,6 @@
 #include "sti3.h"
 #include "ui_sti3.h"
+#include "listwidget.h"
 
 STI3::STI3(QWidget *parent) :
     QStackedWidget(parent),
@@ -63,6 +64,14 @@ void STI3::on_pushButton_10_clicked()
 
 void STI3::on_pushButton_clicked()
 {
+    listWidget *listado=new listWidget(nullptr,"STI3","1");
+    listado->show();
+}
 
+
+void STI3::on_pushButton_2_clicked()
+{
+    listWidget *listado=new listWidget(nullptr,"STI3","2");
+    listado->show();
 }
 

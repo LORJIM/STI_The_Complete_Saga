@@ -2,7 +2,10 @@
 #include "ui_mainwindow.h"
 #include "modalpj.h"
 #include "sti3.h"
+#include "sti2.h"
+#include "daniassistant.h"
 #include <QMessageBox>
+#include <QCheckBox>
 #include <QSystemTrayIcon>
 #include <QCloseEvent>
 
@@ -12,10 +15,20 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
-    //mostrar un qmessagebox que nos pregunte si queremos utilizar el asistente,
-    //usar bajo propio riesgo para activar o desactivar a dani
-
+    //antes de que arranque la app,
+    //mostramos un mensaje para activar o desactivar a dani
+    QMessageBox msgBox;
+    msgBox.setText("¿Desea usar el asistente?");
+    msgBox.setInformativeText("ADVERTENCIA: El uso del asistente puede ser peligroso para el funcionamiento correcto de aplicación, "
+"utilizar bajo propia responsabilidad.");
+    msgBox.setStandardButtons(QMessageBox::Ok);
+    QCheckBox *chkBoxS=new QCheckBox("Sí, deseo utilizar el asistente de ahora en adelante.");
+    msgBox.setCheckBox(chkBoxS);
+    msgBox.setIconPixmap(QPixmap(":/icons/STI_The_Complete_Saga.ico")); //icono personalizado
+    bool asistenteDani=false;
+    if(msgBox.exec() && chkBoxS->isChecked()){
+           asistenteDani=true; //indicador
+    }
 
     //propiedades de la app en segundo plano abajo a la derecha
     mSystemTrayIcon = new QSystemTrayIcon(this);
@@ -23,12 +36,10 @@ MainWindow::MainWindow(QWidget *parent)
     mSystemTrayIcon->setToolTip("STI The Complete Saga"); //tooltip
     mSystemTrayIcon->show();
 
-    //notificacion de bienvenida
-    mSystemTrayIcon->showMessage(tr("¡Hola!"), //mensaje de cabecera
-                                 tr("Hola soy Dani, desde este momento seré tu asistente en la app, ¿puedo ayudarte en algo? 7u7"),
-                                 QIcon(":/icons/dani.ico"), //icono de la noti
-                                 10000); //duracion en ms
-
+    if(asistenteDani){ //llegados a este punto inicializamos a dani si procede
+        DaniAssistant *daniassistant=new DaniAssistant(mSystemTrayIcon);
+        daniassistant->notiBienvenida(); //le pasamos el sistema de notis de la app
+    }
 
     //mensajes de dani, utilizar qtimer singleshot para mostrarlos cada cierto tiempo,ponemos el if aqui
     //y si el asistente esta activado, llamamos a las funciones de dani que tienen qtimer
@@ -139,5 +150,12 @@ void MainWindow::on_actionDJ_Azael_triggered()
 void MainWindow::on_actionHector_triggered()
 {
     loadSubWindow(new modalPJ(nullptr,"8"));
+}
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    STI2 *sti2=new STI2();
+    sti2->show();
 }
 
