@@ -16,8 +16,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+signals:
+    void mouseMoved();
 protected:
     void closeEvent(QCloseEvent *e); //evento de cierre de la mainwindow
+    void mouseMoveEvent(QMouseEvent *event); //el juego del raton de dani
 private slots:
     void on_actionAcerca_de_triggered();
 

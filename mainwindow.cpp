@@ -37,20 +37,9 @@ MainWindow::MainWindow(QWidget *parent)
     mSystemTrayIcon->show();
 
     if(asistenteDani){ //llegados a este punto inicializamos a dani si procede
-        DaniAssistant *daniassistant=new DaniAssistant(mSystemTrayIcon);
-        daniassistant->notiBienvenida(); //le pasamos el sistema de notis de la app
+//        DaniAssistant *daniassistant=
+          new DaniAssistant(this,mSystemTrayIcon); //le pasamos el sistema de notis de la app
     }
-
-    //mensajes de dani, utilizar qtimer singleshot para mostrarlos cada cierto tiempo,ponemos el if aqui
-    //y si el asistente esta activado, llamamos a las funciones de dani que tienen qtimer
-    //si me apuras hasta deberiamos meterlas en un DLL, utilizando thread para que se ejecute al mismo tiempo que el resto de la app...etc.
-    //mostrar un segundo mensaje en plan noti de sigues ahi, estas ahi? hazme casoo
-    //pasado un poco mas de tiempo ya sale el messagebox de advertencia
-    //podriamos poner algun reto de dani como por ejemplo que no se mueva el usuario durante 30seg, y como lo vemos
-    //con el mouseevent le podemos rayar y sacar un mensaje de error cada vez que se mueva
-    //si cumple las ordenes de dani, sale otro mensaje de dani burlandose, diciendo jajaaa te tengo controlado
-    //o sometido y que de momento le deja seguir utilizando la app
-    //pintame algo anda jaja system(mspaint.exe)
 
 
     //A PACO PONERLE MUSICA DE TOROS DE FONDO
@@ -157,5 +146,11 @@ void MainWindow::on_pushButton_3_clicked()
 {
     STI2 *sti2=new STI2();
     sti2->show();
+}
+
+//el juego del raton de dani
+void MainWindow::mouseMoveEvent(QMouseEvent *event){
+    qDebug() << "YEAHY YEAHG";
+    emit mouseMoved();
 }
 
