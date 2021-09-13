@@ -8,6 +8,8 @@
 DaniAssistant::DaniAssistant(QWidget *parent,QSystemTrayIcon *trayIcon)
     : sistemaNotis(trayIcon), appPrincipal(parent)
 {
+    //workaround necesario ya que no permite acceder al evento mouseMove de la app principal ya que es protected
+    //asi que emitimos una signal y usamos un metodo de esta clase
     connect( this->appPrincipal, SIGNAL(mouseMoved()), this, SLOT(mouseMoved()) );
     //aqui iran todas las llamadas a las funciones que se iran lanzando
     this->notiBienvenida();
@@ -16,7 +18,7 @@ DaniAssistant::DaniAssistant(QWidget *parent,QSystemTrayIcon *trayIcon)
     //el siguiente QTimer NO espera a que el otro haya terminado, por lo que se lanza 30 seg despues
     QTimer::singleShot(60000, this, &DaniAssistant::advertencia);
     QTimer::singleShot(90000, this, &DaniAssistant::juego);
-    QTimer::singleShot(150000, this, &DaniAssistant::pintar);
+    QTimer::singleShot(170000, this, &DaniAssistant::pintar);
 }
 
 
@@ -56,28 +58,32 @@ void DaniAssistant::juego(){
     connect( &timer, &QTimer::timeout, &loop, &QEventLoop::quit );
     timer.start(30000);
     bool seMovio=false;
-    do{
+    do{ //el while es para que el listener(loop) se ejecute las veces que haga falta mientras duren los 30 seg
         loop.exec();
         //estas lineas de abajo no se ejecutan hasta que no hayamos salido del loop (que podriamos verlo como un listener)
-        //que o bien es por timeout del timer o bien por mouseMoveEvent
-        if(timer.isActive()){
-            qDebug("semovio");
-            //sacar un mensaje de error cada vez que se mueva
-            seMovio=true;
-        }else if(!seMovio){
-            qDebug("nosemovio");
-            //si cumple las ordenes de dani, sale otro mensaje de dani burlandose, diciendo jajaaa te tengo controlado
-            //o sometido y que de momento le deja seguir utilizando la app
+        //que o bien es por timeout del timer o bien por mouseMoveEvent (los connect de arriba)
+        if(timer.isActive()){ //se movio
+            msgBox.setText("SYSTEM_ERROR");
+            msgBox.setIcon(QMessageBox::Icon::Critical);
+            msgBox.setInformativeText("ERROR ERROR ERROR ERROR");
+            msgBox.exec();
+            seMovio=true; //guardamos variable para saber en las siguientes ejecuciones del bucle que ya se ha movido
+        }else if(!seMovio){ //no se movio ni una sola vez
+            msgBox.setIconPixmap(QPixmap(":/icons/dani.ico"));
+            msgBox.setText("");
+            msgBox.setInformativeText("Jajaaa te tengo sometido totalmente, anda te dejo seguir utilizando la app de momento.");
+            msgBox.exec();
         }
     }while(timer.isActive());
 
 }
 void DaniAssistant::mouseMoved(){
-    emit mouseMovedSignal();
+    emit mouseMovedSignal(); //signal de la propia clase para poder linkarla con el loop en el juego del raton
 }
 void DaniAssistant::pintar(){
     QMessageBox msgBox;
-    msgBox.setText("Píntame algo anda jaja");msgBox.setIconPixmap(QPixmap(":/icons/dani.ico"));
+    msgBox.setText("Píntame algo anda jaja");
+    msgBox.setIconPixmap(QPixmap(":/icons/dani.ico"));
     msgBox.exec();
     system("mspaint.exe"); //te abre el paint xDDDD
 }

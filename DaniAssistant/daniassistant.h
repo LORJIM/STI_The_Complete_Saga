@@ -13,6 +13,7 @@ public:
     ~DaniAssistant(void){};
 signals:
     void mouseMovedSignal();
+    void mouseMovedSignalFinished();
 private:
     QSystemTrayIcon *sistemaNotis;
     QWidget *appPrincipal;
