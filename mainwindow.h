@@ -20,7 +20,6 @@ signals:
     void mouseMoved();
 protected:
     void closeEvent(QCloseEvent *e); //evento de cierre de la mainwindow
-    void mouseMoveEvent(QMouseEvent *event); //el juego del raton de dani
 private slots:
     void on_actionAcerca_de_triggered();
 
@@ -48,5 +47,6 @@ private:
     Ui::MainWindow *ui; //los * son punteros, como referencias para llamar a estas propiedades en el cpp
     QSystemTrayIcon *mSystemTrayIcon; //esto es para que salga abajo a la derecha como app en segundo plano y para notificaciones
     void loadSubWindow(QDialog *widget); //funcion que muestra las modales de pjs (custom dialogs)
+    bool eventFilter(QObject *obj, QEvent *event); //para el juego del raton de dani
 };
 #endif // MAINWINDOW_H

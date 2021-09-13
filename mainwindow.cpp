@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    qApp->installEventFilter(this); //necesario para disparar mouse move event sin tener que apretar boton
+    //setmousetracking true solo sirve para widgets, aqui no me sirvio
     ui->setupUi(this);
 
     //antes de que arranque la app,
@@ -37,8 +39,8 @@ MainWindow::MainWindow(QWidget *parent)
     mSystemTrayIcon->show();
 
     if(asistenteDani){ //llegados a este punto inicializamos a dani si procede
-//        DaniAssistant *daniassistant=
-          new DaniAssistant(this,mSystemTrayIcon); //le pasamos el sistema de notis de la app
+        //DaniAssistant *daniassistant=
+        new DaniAssistant(this,mSystemTrayIcon); //le pasamos el sistema de notis de la app
     }
 
 
@@ -149,8 +151,11 @@ void MainWindow::on_pushButton_3_clicked()
 }
 
 //el juego del raton de dani
-void MainWindow::mouseMoveEvent(QMouseEvent *event){
-    qDebug() << "YEAHY YEAHG";
-    emit mouseMoved();
+bool MainWindow::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type() == QEvent::MouseMove)
+    {
+        emit mouseMoved(); //emite la signal al asistente para que sepa que se ha movido el raton
+    }
+    return false;
 }
-
