@@ -43,8 +43,6 @@ MainWindow::MainWindow(QWidget *parent)
         new DaniAssistant(this,mSystemTrayIcon); //le pasamos el sistema de notis de la app
     }
 
-
-    //A PACO PONERLE MUSICA DE TOROS DE FONDO
 }
 
 MainWindow::~MainWindow()

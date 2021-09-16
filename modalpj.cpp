@@ -1,6 +1,7 @@
 #include "modalpj.h"
 #include "ui_modalpj.h"
 #include <QSqlQuery>
+#include <QMediaPlaylist>
 
 modalPJ::modalPJ(QWidget *parent, QString idpj) :
     QDialog(parent),
@@ -8,6 +9,7 @@ modalPJ::modalPJ(QWidget *parent, QString idpj) :
 {
     ui->setupUi(this);
 
+    QMediaPlayer music;
     //aqui ejecutamos la query con la id del pj para cargar su info en cualquier modal cuando se crea
     QSqlQuery query;
     query.exec("SELECT * FROM PJS WHERE ID LIKE "+idpj);
@@ -21,6 +23,20 @@ modalPJ::modalPJ(QWidget *parent, QString idpj) :
             ui->labelPic2->setPixmap(pix); //seteamos la imagen
         }
     }
+
+    //musica para paco xD
+    if(idpj=="6"){
+        QMediaPlaylist *playlist = new QMediaPlaylist();
+        playlist->addMedia(QUrl("qrc:/music/pasodoble.mp3"));
+        playlist->setPlaybackMode(QMediaPlaylist::Loop); //la ponemos en bucle para evitar que solo se reproduzca una vez
+
+        this->music->setPlaylist(playlist);
+        this->music->play();
+    }
+}
+
+void modalPJ::closeEvent(QCloseEvent *e){ //parar la musica cuando cerremos la modal
+    this->music->stop();
 }
 
 modalPJ::~modalPJ()
