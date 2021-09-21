@@ -304,7 +304,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Historia Principa</string>
+     <string>Historia Principasdgsgdgsgsd</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -330,7 +330,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Historia Principa</string>
+     <string>Historia Principal</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -349,7 +349,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Historia Principa</string>
+     <string>------------------------------------------------------------------</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -383,7 +383,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Atrás</string>
+     <string>Anterior Capítulo</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelDESC">
@@ -392,11 +392,11 @@
       <x>80</x>
       <y>100</y>
       <width>461</width>
-      <height>101</height>
+      <height>201</height>
      </rect>
     </property>
     <property name="text">
-     <string>Encima de que no hace nada en clase, en el recreo se sienta en el pasillo al lado de la puerta y se pone a comerse su bocadillo y a beber su lata de Nestea, tan pancho, viendo la gente pasar. Como si esto no fuera poco, cuando va a tirar la lata, es tan torpe que no encesta en la papelera, rebota y le da a Paco, manchándole las pantorrillas del pantalón. Pero aún hay más, ese mismo día, Amorós, intentando gastar una broma, provoca un accidente entre Sonia y Óscar, dejando tuerto a este último.</string>
+     <string>XXX</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -410,8 +410,8 @@
      <rect>
       <x>80</x>
       <y>30</y>
-      <width>391</width>
-      <height>41</height>
+      <width>701</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -422,7 +422,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Miniserie: La vida de Amorós</string>
+     <string>XXX</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -447,7 +447,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Capítulo 1:</string>
+     <string>XXX</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -467,6 +467,63 @@
     </property>
     <property name="text">
      <string>Siguiente Capítulo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>570</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Volver al Menú</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIMG">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>92</y>
+      <width>261</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>480</width>
+      <height>240</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIMG2">
+    <property name="geometry">
+     <rect>
+      <x>76</x>
+      <y>332</y>
+      <width>300</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>300</width>
+      <height>200</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

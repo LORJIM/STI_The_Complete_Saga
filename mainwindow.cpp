@@ -27,9 +27,8 @@ MainWindow::MainWindow(QWidget *parent)
     QCheckBox *chkBoxS=new QCheckBox("Sí, deseo utilizar el asistente de ahora en adelante.");
     msgBox.setCheckBox(chkBoxS);
     msgBox.setIconPixmap(QPixmap(":/icons/STI_The_Complete_Saga.ico")); //icono personalizado
-    bool asistenteDani=false;
     if(msgBox.exec() && chkBoxS->isChecked()){
-           asistenteDani=true; //indicador
+           this->asistenteDani=true; //indicador
     }
 
     //propiedades de la app en segundo plano abajo a la derecha
@@ -58,27 +57,30 @@ void MainWindow::on_actionAcerca_de_triggered()
 }
 
 void MainWindow::closeEvent(QCloseEvent *e){ //mensaje de confirmacion antes de cerrar el programa
-    QMessageBox msgBox;
-    msgBox.setText("Dani no quiere que te vayas :(");
-    msgBox.setInformativeText("¡No!, no te vayas por favor. Me haces daño...ugghh");
-    msgBox.setStandardButtons(QMessageBox::Close | QMessageBox::Cancel);
-    msgBox.setDefaultButton(QMessageBox::Close);
-    msgBox.setIconPixmap(QPixmap(":/icons/dani.ico")); //icono personalizado
-    //traduccion de botones
-    msgBox.setButtonText(QMessageBox::Close, tr("Cerrar")); //esto deberia hacerse con un translator externo pero meh
-    msgBox.setButtonText(QMessageBox::Cancel, tr("Cancelar"));
-    int ret = msgBox.exec(); //resultado de la modal dependiendo del boton que clickemos
-    switch (ret) {
-       case QMessageBox::Close:
-           break;
-       case QMessageBox::Cancel:
-           e->ignore(); //evita que se cierre el programa ya que estamos diciendo que ignore el evento
-           break;
-       default:
-           // should never be reached
-           break;
-     }
-
+    //lamentablemente esta funcion no puede estar en el DLL ya que contiene un protected event y no podemos acceder a el desde el DLL
+    //de todas formas, el DLL esta pensado para funciones en segundo plano, y esta no es una de ellas asi que OK
+    if(this->asistenteDani){
+        QMessageBox msgBox;
+        msgBox.setText("Dani no quiere que te vayas :(");
+        msgBox.setInformativeText("¡No!, no te vayas por favor. Me haces daño...ugghh");
+        msgBox.setStandardButtons(QMessageBox::Close | QMessageBox::Cancel);
+        msgBox.setDefaultButton(QMessageBox::Close);
+        msgBox.setIconPixmap(QPixmap(":/icons/dani.ico")); //icono personalizado
+        //traduccion de botones
+        msgBox.setButtonText(QMessageBox::Close, tr("Cerrar")); //esto deberia hacerse con un translator externo pero meh
+        msgBox.setButtonText(QMessageBox::Cancel, tr("Cancelar"));
+        int ret = msgBox.exec(); //resultado de la modal dependiendo del boton que clickemos
+        switch (ret) {
+           case QMessageBox::Close:
+               break;
+           case QMessageBox::Cancel:
+               e->ignore(); //evita que se cierre el programa ya que estamos diciendo que ignore el evento
+               break;
+           default:
+               // should never be reached
+               break;
+         }
+    }
 }
 
 

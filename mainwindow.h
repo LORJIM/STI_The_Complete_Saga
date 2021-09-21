@@ -48,5 +48,6 @@ private:
     QSystemTrayIcon *mSystemTrayIcon; //esto es para que salga abajo a la derecha como app en segundo plano y para notificaciones
     void loadSubWindow(QDialog *widget); //funcion que muestra las modales de pjs (custom dialogs)
     bool eventFilter(QObject *obj, QEvent *event); //para el juego del raton de dani
+    bool asistenteDani=false; //indicador de activacion del asistente
 };
 #endif // MAINWINDOW_H
