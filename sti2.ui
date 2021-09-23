@@ -373,6 +373,18 @@
    </widget>
   </widget>
   <widget class="QWidget" name="page_3">
+   <property name="minimumSize">
+    <size>
+     <width>980</width>
+     <height>720</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>980</width>
+     <height>720</height>
+    </size>
+   </property>
    <widget class="QPushButton" name="pushButton_8">
     <property name="geometry">
      <rect>
@@ -510,7 +522,7 @@
       <x>76</x>
       <y>332</y>
       <width>300</width>
-      <height>141</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="maximumSize">
@@ -524,6 +536,32 @@
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIMG2DESC">
+    <property name="geometry">
+     <rect>
+      <x>76</x>
+      <y>473</y>
+      <width>421</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIMGDESC">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>350</y>
+      <width>301</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

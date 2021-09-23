@@ -57,10 +57,12 @@ void STI2::loadMiniSerie(QString serie){
         auto data1 = QJsonObject(
         {
         qMakePair(QString("SERIE"), query.value("SERIE").toString()),
-        qMakePair(QString("CAP"), query.value("CAP").toString()), //DA ERROR ARRAY USED AS INITIALIZER
+        qMakePair(QString("CAP"), query.value("CAP").toString()),
         qMakePair(QString("DESC"), query.value("DESC").toString()),
-        qMakePair(QString("IMG"), query.value("IMG").toString())
-        //qMakePair("IMG2", query.value("IMG2").toString())
+        qMakePair(QString("IMG"), query.value("IMG").toString()),
+        qMakePair(QString("IMG2"), query.value("IMG2").toString()),
+        qMakePair(QString("IMGDESC"), query.value("IMGDESC").toString()),
+        qMakePair(QString("IMG2DESC"), query.value("IMG2DESC").toString())
         });
 
         this->capitulos.push_back(QJsonValue(data1));
@@ -85,6 +87,16 @@ void STI2::loadCapitulo(int capitulo){
         QPixmap pix(this->capitulos.at(capitulo).toObject().value("IMG").toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
         ui->labelIMG->setPixmap(pix); //seteamos la imagen
     }
+    if(!this->capitulos.at(capitulo).toObject().value("IMG2").isNull()){
+        QPixmap pix(this->capitulos.at(capitulo).toObject().value("IMG2").toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
+        ui->labelIMG->setPixmap(pix); //seteamos la imagen
+    }
+
+    if(!this->capitulos.at(capitulo).toObject().value("IMGDESC").isNull())
+        ui->labelIMGDESC->setText(this->capitulos.at(capitulo).toObject().value("IMGDESC").toString());
+    if(!this->capitulos.at(capitulo).toObject().value("IMG2DESC").isNull())
+        ui->labelIMG2DESC->setText(this->capitulos.at(capitulo).toObject().value("IMG2DESC").toString());
+
 }
 
 void STI2::on_pushButton_16_clicked() //siguiente capitulo

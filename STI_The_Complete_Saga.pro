@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    gallery.cpp \
     listwidget.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
     sti3.cpp
 
 HEADERS += \
+    gallery.h \
     listwidget.h \
     mainwindow.h \
     modalpj.h \
@@ -24,6 +26,7 @@ HEADERS += \
     sti3.h
 
 FORMS += \
+    gallery.ui \
     listwidget.ui \
     mainwindow.ui \
     modalpj.ui \

@@ -75,3 +75,10 @@ void STI3::on_pushButton_2_clicked()
     listado->show();
 }
 
+
+void STI3::on_pushButton_11_clicked() //galeria
+{
+    listWidget *listado=new listWidget(nullptr,"STI3","1",true);
+    listado->show();
+}
+

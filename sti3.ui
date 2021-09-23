@@ -231,6 +231,19 @@
      <string>Atrás</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_11">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>270</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Galería de imágenes</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QWidget" name="page_3">
    <widget class="QLabel" name="label_4">
