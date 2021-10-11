@@ -1,7 +1,17 @@
 <RCC>
-    <qresource prefix="/images">
-        <file>Doraemonguer_y_sus_amijos.jpg</file>
-        <file>deporte.jpg</file>
-        <file>jaimeNP.jpg</file>
+    <qresource prefix="/">
+        <file>images/abel.png</file>
+        <file>images/alfon.png</file>
+        <file>images/camacho.png</file>
+        <file>images/carmelo.png</file>
+        <file>images/carmen.png</file>
+        <file>images/Doraemonguer_y_sus_amijos.jpg</file>
+        <file>images/Georgie.png</file>
+        <file>images/julio.png</file>
+        <file>images/santi.png</file>
+        <file>images/STI1_Title.png</file>
+        <file>images/torresano.png</file>
+        <file>images/STI2_Title.png</file>
+        <file>images/STI3_Title.png</file>
     </qresource>
 </RCC>

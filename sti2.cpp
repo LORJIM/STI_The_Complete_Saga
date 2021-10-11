@@ -129,3 +129,32 @@ void STI2::on_pushButton_7_clicked() //listado de chorradas
     listado->show();
 }
 
+void STI2::loadVideo(QUrl url){ //funcion comun para reproducir videos de rapunsen
+    Player *player = new Player;
+    QList<QUrl> list = { url };
+    player->addToPlaylist(list);
+    player->show();
+}
+
+void STI2::on_pushButton_10_clicked() //rapunsen 1
+{
+    loadVideo(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/videos/rapunsen.avi"));
+}
+
+void STI2::on_pushButton_11_clicked() //rapunsen 2
+{
+    loadVideo(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/videos/rapunsen2.avi"));
+}
+
+
+void STI2::on_pushButton_13_clicked() //rapunsen 3
+{
+    loadVideo(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/videos/rapunsen3.avi"));
+}
+
+
+void STI2::on_pushButton_12_clicked() //rapunsen 4
+{
+    loadVideo(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/videos/rapunsen4.mp4"));
+}
+

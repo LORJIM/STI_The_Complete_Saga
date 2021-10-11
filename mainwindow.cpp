@@ -3,6 +3,7 @@
 #include "modalpj.h"
 #include "sti3.h"
 #include "sti2.h"
+#include "sti1.h"
 #include "daniassistant.h"
 #include <QMessageBox>
 #include <QCheckBox>
@@ -159,3 +160,58 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event)
     }
     return false;
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    STI1 *sti1=new STI1();
+    sti1->show();
+}
+
+
+void MainWindow::on_actionGeorgie_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"3"));
+}
+
+
+void MainWindow::on_actionAbel_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"10"));
+}
+
+
+void MainWindow::on_actionSanti_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"11"));
+}
+
+
+void MainWindow::on_actionCarmen_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"12"));
+}
+
+
+void MainWindow::on_actionTorresano_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"13"));
+}
+
+
+void MainWindow::on_actionCamacho_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"14"));
+}
+
+
+void MainWindow::on_actionCarmelo_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"15"));
+}
+
+
+void MainWindow::on_actionJulio_triggered()
+{
+    loadSubWindow(new modalPJ(nullptr,"16"));
+}
+

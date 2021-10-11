@@ -16,10 +16,10 @@ modalPJ::modalPJ(QWidget *parent, QString idpj) :
     while(query.next()){ //solo obtendremos un resultado
         ui->desc->setText(query.value("Desc").toString());
         ui->nombre->setText(query.value("Nombre").toString());
-        QPixmap pix(query.value("Image").toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
+        QPixmap pix(QCoreApplication::applicationDirPath()+query.value("Image").toString()); //accedemos a la imagen con la ruta local de la columna Image
         ui->labelPic->setPixmap(pix); //seteamos la imagen
         if(!query.value("Image2").isNull()){
-            QPixmap pix(query.value("Image2").toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
+            QPixmap pix(QCoreApplication::applicationDirPath()+query.value("Image2").toString()); //accedemos a la imagen con la ruta local de la columna Image
             ui->labelPic2->setPixmap(pix); //seteamos la imagen
         }
     }
@@ -27,7 +27,7 @@ modalPJ::modalPJ(QWidget *parent, QString idpj) :
     //musica para paco xD
     if(idpj=="6"){
         QMediaPlaylist *playlist = new QMediaPlaylist();
-        playlist->addMedia(QUrl("qrc:/music/pasodoble.mp3"));
+        playlist->addMedia(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/music/pasodoble.mp3"));
         playlist->setPlaybackMode(QMediaPlaylist::Loop); //la ponemos en bucle para evitar que solo se reproduzca una vez
 
         this->music->setPlaylist(playlist);

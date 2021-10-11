@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>566</width>
+    <width>719</width>
     <height>454</height>
    </rect>
   </property>
@@ -64,7 +64,17 @@
            </size>
           </property>
           <property name="text">
-           <string>STI</string>
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="iconos.qrc">
+            <normaloff>:/icons/STI1.png</normaloff>:/icons/STI1.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>150</width>
+            <height>30</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -93,7 +103,17 @@
            </size>
           </property>
           <property name="text">
-           <string>STI 2: EL RETORNO</string>
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="iconos.qrc">
+            <normaloff>:/icons/STI2.png</normaloff>:/icons/STI2.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>360</width>
+            <height>32</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -122,7 +142,17 @@
            </size>
           </property>
           <property name="text">
-           <string>STI 3: LA VENGANZA DE JESÚS</string>
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="iconos.qrc">
+            <normaloff>:/icons/STI3.png</normaloff>:/icons/STI3.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>370</width>
+            <height>32</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -163,7 +193,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>566</width>
+     <width>719</width>
      <height>20</height>
     </rect>
    </property>
@@ -173,12 +203,20 @@
     </property>
     <addaction name="actionJaime"/>
     <addaction name="actionDani"/>
+    <addaction name="actionGeorgie"/>
     <addaction name="actionJesucristo"/>
     <addaction name="actionAlfonso"/>
     <addaction name="actionPaco"/>
     <addaction name="actionDJ_Azael"/>
     <addaction name="actionHector"/>
     <addaction name="actionRoberto"/>
+    <addaction name="actionAbel"/>
+    <addaction name="actionSanti"/>
+    <addaction name="actionCarmen"/>
+    <addaction name="actionTorresano"/>
+    <addaction name="actionCamacho"/>
+    <addaction name="actionCarmelo"/>
+    <addaction name="actionJulio"/>
    </widget>
    <addaction name="menuArchivo"/>
   </widget>
@@ -197,6 +235,8 @@
    <addaction name="separator"/>
    <addaction name="actionDani"/>
    <addaction name="separator"/>
+   <addaction name="actionGeorgie"/>
+   <addaction name="separator"/>
    <addaction name="actionJesucristo"/>
    <addaction name="separator"/>
    <addaction name="actionAlfonso"/>
@@ -208,6 +248,20 @@
    <addaction name="actionHector"/>
    <addaction name="separator"/>
    <addaction name="actionRoberto"/>
+   <addaction name="separator"/>
+   <addaction name="actionAbel"/>
+   <addaction name="separator"/>
+   <addaction name="actionSanti"/>
+   <addaction name="separator"/>
+   <addaction name="actionCarmen"/>
+   <addaction name="separator"/>
+   <addaction name="actionTorresano"/>
+   <addaction name="separator"/>
+   <addaction name="actionCamacho"/>
+   <addaction name="separator"/>
+   <addaction name="actionCarmelo"/>
+   <addaction name="separator"/>
+   <addaction name="actionJulio"/>
    <addaction name="separator"/>
    <addaction name="actionAcerca_de"/>
   </widget>
@@ -253,13 +307,13 @@
     <string>Jesucristo</string>
    </property>
    <property name="shortcut">
-    <string>F3</string>
+    <string>F4</string>
    </property>
   </action>
   <action name="actionAlfonso">
    <property name="icon">
-    <iconset resource="iconos.qrc">
-     <normaloff>:/icons/alfon_bS8_icon.ico</normaloff>:/icons/alfon_bS8_icon.ico</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/images/alfon.png</normaloff>:/images/alfon.png</iconset>
    </property>
    <property name="text">
     <string>Alfonso</string>
@@ -268,7 +322,7 @@
     <string>Alfonso</string>
    </property>
    <property name="shortcut">
-    <string>F4</string>
+    <string>F5</string>
    </property>
   </action>
   <action name="actionPaco">
@@ -283,7 +337,7 @@
     <string>Paco</string>
    </property>
    <property name="shortcut">
-    <string>F5</string>
+    <string>F6</string>
    </property>
   </action>
   <action name="actionAcerca_de">
@@ -310,7 +364,7 @@
     <string>DJ Azael</string>
    </property>
    <property name="shortcut">
-    <string>F6</string>
+    <string>F7</string>
    </property>
   </action>
   <action name="actionHector">
@@ -325,7 +379,7 @@
     <string>HÉCTOR</string>
    </property>
    <property name="shortcut">
-    <string>F7</string>
+    <string>F8</string>
    </property>
   </action>
   <action name="actionRoberto">
@@ -340,12 +394,121 @@
     <string>Roberto</string>
    </property>
    <property name="shortcut">
-    <string>F8</string>
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="actionGeorgie">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Georgie.png</normaloff>:/images/Georgie.png</iconset>
+   </property>
+   <property name="text">
+    <string>Georgie</string>
+   </property>
+   <property name="toolTip">
+    <string>Georgie</string>
+   </property>
+   <property name="shortcut">
+    <string>F3</string>
+   </property>
+  </action>
+  <action name="actionAbel">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/abel.png</normaloff>:/images/abel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abel</string>
+   </property>
+   <property name="toolTip">
+    <string>Abel</string>
+   </property>
+   <property name="shortcut">
+    <string>F10</string>
+   </property>
+  </action>
+  <action name="actionSanti">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/santi.png</normaloff>:/images/santi.png</iconset>
+   </property>
+   <property name="text">
+    <string>Santi</string>
+   </property>
+   <property name="toolTip">
+    <string>Santi</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+  <action name="actionCarmen">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/carmen.png</normaloff>:/images/carmen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Carmen</string>
+   </property>
+   <property name="toolTip">
+    <string>Carmen</string>
+   </property>
+   <property name="shortcut">
+    <string>F12</string>
+   </property>
+  </action>
+  <action name="actionTorresano">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/torresano.png</normaloff>:/images/torresano.png</iconset>
+   </property>
+   <property name="text">
+    <string>Torresano</string>
+   </property>
+   <property name="toolTip">
+    <string>Torresano</string>
+   </property>
+  </action>
+  <action name="actionCamacho">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/camacho.png</normaloff>:/images/camacho.png</iconset>
+   </property>
+   <property name="text">
+    <string>Camacho</string>
+   </property>
+   <property name="toolTip">
+    <string>Camacho</string>
+   </property>
+  </action>
+  <action name="actionCarmelo">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/carmelo.png</normaloff>:/images/carmelo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Carmelo</string>
+   </property>
+   <property name="toolTip">
+    <string>Carmelo</string>
+   </property>
+  </action>
+  <action name="actionJulio">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/julio.png</normaloff>:/images/julio.png</iconset>
+   </property>
+   <property name="text">
+    <string>Julio</string>
+   </property>
+   <property name="toolTip">
+    <string>Julio</string>
    </property>
   </action>
  </widget>
  <resources>
   <include location="iconos.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

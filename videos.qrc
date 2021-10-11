@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>videos/feelspecial.mp4</file>
+        <file>videos/Fortnite_20210917193935.mp4</file>
+    </qresource>
+</RCC>

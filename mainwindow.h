@@ -43,6 +43,24 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_actionGeorgie_triggered();
+
+    void on_actionAbel_triggered();
+
+    void on_actionSanti_triggered();
+
+    void on_actionCarmen_triggered();
+
+    void on_actionTorresano_triggered();
+
+    void on_actionCamacho_triggered();
+
+    void on_actionCarmelo_triggered();
+
+    void on_actionJulio_triggered();
+
 private:
     Ui::MainWindow *ui; //los * son punteros, como referencias para llamar a estas propiedades en el cpp
     QSystemTrayIcon *mSystemTrayIcon; //esto es para que salga abajo a la derecha como app en segundo plano y para notificaciones

@@ -76,9 +76,9 @@ void STI3::on_pushButton_2_clicked()
 }
 
 
-void STI3::on_pushButton_11_clicked() //galeria
+void STI3::on_pushButton_11_clicked() //galeria de imagenes
 {
-    listWidget *listado=new listWidget(nullptr,"STI3","1",true);
+    listWidget *listado=new listWidget(nullptr,"STI3","1",1);
     listado->show();
 }
 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>STI1</class>
+ <widget class="QStackedWidget" name="STI1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>940</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>940</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>940</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>STI</string>
+  </property>
+  <widget class="QWidget" name="page">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>30</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/STI1_Title.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>140</y>
+      <width>511</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Septiembre de 2017, una serie de sujetos descerebrados traídos de todas partes del mundo son convocados en el histórico y reputado centro Satafi, para formar juntos la nueva promoción del Grado Superior: Sistemas de Telecomunicaciones e Informáticos (STI).
+
+Bajo la supervisión del sargento Torresano, esta promoción estaba pensada para ser la más prometedora de todas, pero lo que no sabía el veterano Consejo de Profesores es que iba a ser todo lo contrario. 2 años de locura, desenfreno y estupidez sin límites.
+
+Es en este entorno donde se conocen nuestros 2 protagonistas, Daniel Amorós y Jaime NP, por cosas del destino, al necesitar Dani un ordenador con Internet. Más tarde conocerían a Jorge (alias Georgie), un misterioso chico de Malagón que habían echado del turno de tarde. 
+
+Juntos comenzaron sus aventuras, en una lucha constante por sobrevivir a los retos del Consejo de Profesores mientras forman parte de la peor promoción (pero también la más divertida) en siglos.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>480</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Listado de coñas</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

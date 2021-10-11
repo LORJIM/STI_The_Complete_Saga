@@ -3,6 +3,7 @@
 
 #include <QStackedWidget>
 #include <QJsonArray>
+#include <player.h>
 
 namespace Ui {
 class STI2;
@@ -15,6 +16,7 @@ class STI2 : public QStackedWidget
 public:
     explicit STI2(QWidget *parent = nullptr);
     ~STI2();
+
 
 private slots:
     void on_pushButton_2_clicked();
@@ -37,10 +39,19 @@ private slots:
 
     void on_pushButton_7_clicked();
 
+    void on_pushButton_10_clicked();
+
+    void on_pushButton_11_clicked();
+
+    void on_pushButton_13_clicked();
+
+    void on_pushButton_12_clicked();
+
 private:
     Ui::STI2 *ui;
     void loadMiniSerie(QString serie);
     void loadCapitulo(int capitulo);
+    void loadVideo(QUrl url);
     QString serie;
     int capitulo;
     QJsonArray capitulos;
