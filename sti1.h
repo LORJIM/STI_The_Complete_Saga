@@ -18,8 +18,15 @@ public:
 private slots:
     void on_pushButton_7_clicked();
 
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_10_clicked();
+
 private:
     Ui::STI1 *ui;
+    void loadPlayer(int tipo);
 };
 
 #endif // STI1_H

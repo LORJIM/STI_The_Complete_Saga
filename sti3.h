@@ -38,8 +38,15 @@ private slots:
 
     void on_pushButton_11_clicked();
 
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_15_clicked();
+
+    void on_pushButton_14_clicked();
+
 private:
     Ui::STI3 *ui;
+    void loadPlayer(int tipo,int arco);
 };
 
 #endif // STI3_H

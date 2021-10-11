@@ -73,7 +73,7 @@ Juntos comenzaron sus aventuras, en una lucha constante por sobrevivir a los ret
    <widget class="QPushButton" name="pushButton_7">
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>80</x>
       <y>480</y>
       <width>121</width>
       <height>31</height>
@@ -81,6 +81,45 @@ Juntos comenzaron sus aventuras, en una lucha constante por sobrevivir a los ret
     </property>
     <property name="text">
      <string>Listado de coñas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>480</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Galería de audios</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>480</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Galería de vídeos</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_10">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>480</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Galería de imágenes</string>
     </property>
    </widget>
   </widget>

@@ -3,6 +3,7 @@
 #include "listwidget.h"
 #include <QSqlQuery>
 #include <QJsonObject>
+#include <QDir>
 
 STI2::STI2(QWidget *parent) :
     QStackedWidget(parent),
@@ -156,5 +157,44 @@ void STI2::on_pushButton_13_clicked() //rapunsen 3
 void STI2::on_pushButton_12_clicked() //rapunsen 4
 {
     loadVideo(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/videos/rapunsen4.mp4"));
+}
+
+void STI2::loadPlayer(int tipo){
+    QString path=QCoreApplication::applicationDirPath()+(tipo==0 ? "/music" : "/videos")+"/STI2/"; //directorio donde estan los archivos
+    QDir source(path);
+    QStringList filters;
+    if(tipo==0){ //ponemos esto para evitar que lea archivos que no debe
+        filters.append({"*.mp3","*.m4a"});
+    }else if(tipo==1){
+        filters.append({"*.avi","*.mp4"});
+    }
+
+    QStringList listaArchivos=source.entryList(filters); //leemos los nombres de los videos
+    QList<QUrl> listaReprod;
+    foreach (QString archivo, listaArchivos) { //los vamos metiendo en la lista de Reproduccion
+        QUrl url=QUrl::fromLocalFile(path+archivo); //url local completa del video
+        listaReprod.append(url);
+    }
+    Player *player = new Player;
+    player->addToPlaylist(listaReprod);
+    player->show(); //inicializamos el reproductor
+}
+
+void STI2::on_pushButton_14_clicked() //galeria de videos
+{
+    loadPlayer(1); //1 indica que es video
+}
+
+
+void STI2::on_pushButton_15_clicked() //galeria de audios
+{
+    loadPlayer(0); //1 indica que es audio
+}
+
+
+void STI2::on_pushButton_17_clicked() //galeria de imagenes
+{
+    listWidget *listado=new listWidget(nullptr,"STI2",nullptr,true);
+    listado->show();
 }
 

@@ -47,6 +47,12 @@ private slots:
 
     void on_pushButton_12_clicked();
 
+    void on_pushButton_14_clicked();
+
+    void on_pushButton_15_clicked();
+
+    void on_pushButton_17_clicked();
+
 private:
     Ui::STI2 *ui;
     void loadMiniSerie(QString serie);
@@ -55,6 +61,7 @@ private:
     QString serie;
     int capitulo;
     QJsonArray capitulos;
+    void loadPlayer(int tipo);
 };
 
 #endif // STI2_H
