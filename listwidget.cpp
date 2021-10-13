@@ -14,7 +14,7 @@ listWidget::listWidget(QWidget *parent, QString entrega, QString arco, bool gale
 
     if(galeria){ //galeria de imagenes
         this->imagenes=QJsonArray(); //galeria multimedia resetea array
-        QString path=QCoreApplication::applicationDirPath()+"/images/"+entrega+"/"+(arco!=nullptr ? arco+"/" : ""); //directorio donde estan los videos
+        QString path=QCoreApplication::applicationDirPath()+"/images/"+(entrega!=nullptr ? entrega : "OBRAS_AMOROS")+"/"+(arco!=nullptr ? arco+"/" : ""); //directorio donde estan los videos
         QDir source(path);
         QStringList filters={ //ponemos esto para evitar que lea archivos que no debe
             "*.jpg","*.png","*.jpeg","*.gif"

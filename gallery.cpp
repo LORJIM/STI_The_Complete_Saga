@@ -1,6 +1,7 @@
 #include "gallery.h"
 #include "ui_gallery.h"
 #include <QJsonObject>
+#include <QMovie>
 
 gallery::gallery(QWidget *parent, QJsonArray imagenes, int imagenActual) :
     QStackedWidget(parent),
@@ -22,9 +23,18 @@ void gallery::loadImagen(int imagen){
     if(this->imagen+1==this->imagenes.count()) ui->pushButton_16->hide(); //si es el ultimo no hay imagen siguiente
     else ui->pushButton_16->show(); //a partir del 2 se muestra
 
-    if(!this->imagenes.at(imagen).toObject().value("IMG").isNull()){
-        QPixmap pix(this->imagenes.at(imagen).toObject().value("IMG").toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
-        ui->labelIMG->setPixmap(pix); //seteamos la imagen
+
+    auto img=this->imagenes.at(imagen).toObject().value("IMG"); //accedemos a la imagen con la ruta de recursos de la columna Image
+    if(!img.isNull()){
+        if(img.toString().endsWith("gif")){ //si es un gif lo tratamos como animacion
+            QMovie *movie = new QMovie(img.toString());
+            ui->labelIMG->setMovie(movie);
+            movie->start();
+        }else{ //si es otro formato es un pix normal y corriente
+            QPixmap pix(img.toString());
+            ui->labelIMG->setPixmap(pix); //seteamos la imagen
+        }
+
     }
 
     if(!this->imagenes.at(imagen).toObject().value("IMGDESC").isNull())

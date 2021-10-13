@@ -17,6 +17,9 @@ public:
     ~modalPJ();
 protected:
     void closeEvent(QCloseEvent *e); //evento de cierre de la modal
+private slots:
+    void on_buttonObras_clicked();
+
 private:
     Ui::modalPJ *ui;
     QMediaPlayer *music = new QMediaPlayer(); //el qmediaplayer lo ponemos como propiedad para poder manejarlo en el closeEvent

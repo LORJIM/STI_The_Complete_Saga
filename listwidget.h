@@ -14,7 +14,7 @@ class listWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit listWidget(QWidget *parent = nullptr, QString entrega = "STI1", QString arco = nullptr, bool galeria=false); //entrega 1 default para que no pete la query
+    explicit listWidget(QWidget *parent = nullptr, QString entrega = nullptr, QString arco = nullptr, bool galeria=false);
     ~listWidget();
 
 private slots:

@@ -77,7 +77,9 @@ void VideoWidget::keyPressEvent(QKeyEvent *event)
         QVideoWidget::keyPressEvent(event);
     }
 }
-
+void VideoWidget::fullScreen(){ //funcion custom para ponerlo fullscreen desde otros widgets
+    setFullScreen(true);
+}
 void VideoWidget::mouseDoubleClickEvent(QMouseEvent *event)
 {
     setFullScreen(!isFullScreen());

@@ -4,6 +4,7 @@
 #include <QSqlQuery>
 #include <QJsonObject>
 #include <QDir>
+#include <QFileInfo>
 
 STI2::STI2(QWidget *parent) :
     QStackedWidget(parent),
@@ -50,23 +51,30 @@ void STI2::loadMiniSerie(QString serie){
     this->setCurrentIndex(2);
     this->capitulos=QJsonArray(); //resetea array
 
+    QString path=QCoreApplication::applicationDirPath()+"/images/MINI_SERIES/"+serie+"/"; //path imagenes de la serie
+    int capitulo=1; //contador necesario tambien para ir cogiendo las imagenes locales
     //query sql
     QSqlQuery query;
     query.exec("SELECT * FROM MINISERIES WHERE SUBSTR(ID,1,1) LIKE "+serie); //select de los caps de la serie
     while(query.next()){ //los vamos guardando en el array
-        // use initializer list to construct QJsonObject
+        //primero buscamos las imagenes y su desc en local
+        //IMPORTANTE: QUE SEAN TODAS JPG PARA EVITAR CONTROLES ADICIONALES
+        QFileInfo img1(path+QString::number(capitulo)+"1.jpg");
+        QFileInfo img2(path+QString::number(capitulo)+"2.jpg");
+
+        // use initializer list to construct QJsonObject (asignamos valores
         auto data1 = QJsonObject(
         {
         qMakePair(QString("SERIE"), query.value("SERIE").toString()),
         qMakePair(QString("CAP"), query.value("CAP").toString()),
         qMakePair(QString("DESC"), query.value("DESC").toString()),
-        qMakePair(QString("IMG"), query.value("IMG").toString()),
-        qMakePair(QString("IMG2"), query.value("IMG2").toString()),
+        qMakePair(QString("IMG"), (img1.exists() ? img1.absoluteFilePath() : "")),
+        qMakePair(QString("IMG2"),(img2.exists() ? img2.absoluteFilePath() : "")),
         qMakePair(QString("IMGDESC"), query.value("IMGDESC").toString()),
         qMakePair(QString("IMG2DESC"), query.value("IMG2DESC").toString())
         });
-
         this->capitulos.push_back(QJsonValue(data1));
+        capitulo++;
     }
     this->loadCapitulo(1);
 }
@@ -84,19 +92,24 @@ void STI2::loadCapitulo(int capitulo){
     ui->labelTITU->setText(this->capitulos.at(capitulo).toObject().value("SERIE").toString());
     ui->labelCAP->setText(this->capitulos.at(capitulo).toObject().value("CAP").toString());
     ui->labelDESC->setText(this->capitulos.at(capitulo).toObject().value("DESC").toString());
-    if(!this->capitulos.at(capitulo).toObject().value("IMG").isNull()){
-        QPixmap pix(this->capitulos.at(capitulo).toObject().value("IMG").toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
-        ui->labelIMG->setPixmap(pix); //seteamos la imagen
-    }
-    if(!this->capitulos.at(capitulo).toObject().value("IMG2").isNull()){
-        QPixmap pix(this->capitulos.at(capitulo).toObject().value("IMG2").toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
+    auto img1=this->capitulos.at(capitulo).toObject().value("IMG");
+    if(!img1.isNull()){
+        QPixmap pix(img1.toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
         ui->labelIMG->setPixmap(pix); //seteamos la imagen
     }
 
-    if(!this->capitulos.at(capitulo).toObject().value("IMGDESC").isNull())
-        ui->labelIMGDESC->setText(this->capitulos.at(capitulo).toObject().value("IMGDESC").toString());
-    if(!this->capitulos.at(capitulo).toObject().value("IMG2DESC").isNull())
-        ui->labelIMG2DESC->setText(this->capitulos.at(capitulo).toObject().value("IMG2DESC").toString());
+    auto img2=this->capitulos.at(capitulo).toObject().value("IMG2");
+    if(!img2.isNull()){
+        QPixmap pix(img2.toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
+        ui->labelIMG2->setPixmap(pix); //seteamos la imagen
+    }
+
+    auto img1Desc=this->capitulos.at(capitulo).toObject().value("IMGDESC");
+    if(!img1Desc.isNull())
+        ui->labelIMGDESC->setText(img1Desc.toString());
+    auto img2Desc=this->capitulos.at(capitulo).toObject().value("IMG2DESC");
+    if(!img2Desc.isNull())
+        ui->labelIMG2DESC->setText(img2Desc.toString());
 
 }
 
@@ -135,6 +148,7 @@ void STI2::loadVideo(QUrl url){ //funcion comun para reproducir videos de rapuns
     QList<QUrl> list = { url };
     player->addToPlaylist(list);
     player->show();
+    player->play();
 }
 
 void STI2::on_pushButton_10_clicked() //rapunsen 1
@@ -164,9 +178,9 @@ void STI2::loadPlayer(int tipo){
     QDir source(path);
     QStringList filters;
     if(tipo==0){ //ponemos esto para evitar que lea archivos que no debe
-        filters.append({"*.mp3","*.m4a"});
+        filters.append({"*.mp3","*.m4a","*.opus","*.wav"});
     }else if(tipo==1){
-        filters.append({"*.avi","*.mp4"});
+        filters.append({"*.avi","*.mp4","*.mov","*.mkv","*.wmv"});
     }
 
     QStringList listaArchivos=source.entryList(filters); //leemos los nombres de los videos

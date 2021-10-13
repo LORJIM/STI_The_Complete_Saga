@@ -28,9 +28,9 @@ void STI1::loadPlayer(int tipo){
     QDir source(path);
     QStringList filters;
     if(tipo==0){ //ponemos esto para evitar que lea archivos que no debe
-        filters.append({"*.mp3","*.m4a"});
+        filters.append({"*.mp3","*.m4a","*.opus","*.wav"});
     }else if(tipo==1){
-        filters.append({"*.avi","*.mp4"});
+        filters.append({"*.avi","*.mp4","*.mov","*.mkv","*.wmv"});
     }
 
     QStringList listaArchivos=source.entryList(filters); //leemos los nombres de los videos

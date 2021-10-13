@@ -86,7 +86,7 @@ public:
 
 signals:
     void fullScreenChanged(bool fullScreen);
-
+    void play(); //esta signal simplemente posibilita que podamos reproducir el video de manera automatica desde otro widget
 private slots:
     void open();
     void durationChanged(qint64 duration);

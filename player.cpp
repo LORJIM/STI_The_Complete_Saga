@@ -134,6 +134,8 @@ Player::Player(QWidget *parent)
     controls->setMuted(controls->isMuted());
 
     connect(controls, &PlayerControls::play, m_player, &QMediaPlayer::play);
+    connect(this, &Player::play, m_player, &QMediaPlayer::play); //para reproduccion automatica
+    connect(this, SIGNAL(play()), m_videoWidget, SLOT(fullScreen())); //para reproduccion automatica, tambien lo ponemos a pantalla completa
     connect(controls, &PlayerControls::pause, m_player, &QMediaPlayer::pause);
     connect(controls, &PlayerControls::stop, m_player, &QMediaPlayer::stop);
     connect(controls, &PlayerControls::next, m_playlist, &QMediaPlaylist::next);
@@ -211,6 +213,7 @@ bool Player::isPlayerAvailable() const
 {
     return m_player->isAvailable();
 }
+
 
 void Player::open()
 {

@@ -59,7 +59,8 @@ class VideoWidget : public QVideoWidget
 
 public:
     explicit VideoWidget(QWidget *parent = nullptr);
-
+public Q_SLOTS:
+    void fullScreen(); //necesario para controlar la pantalla completa desde otros widget
 protected:
     void keyPressEvent(QKeyEvent *event) override;
     void mouseDoubleClickEvent(QMouseEvent *event) override;

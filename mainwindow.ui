@@ -199,26 +199,32 @@
    </property>
    <widget class="QMenu" name="menuArchivo">
     <property name="title">
-     <string>Personajes</string>
+     <string>Alumnos</string>
     </property>
     <addaction name="actionJaime"/>
     <addaction name="actionDani"/>
     <addaction name="actionGeorgie"/>
+    <addaction name="actionDJ_Azael"/>
+    <addaction name="actionHector"/>
+    <addaction name="actionSanti"/>
+    <addaction name="actionCarmen"/>
+    <addaction name="actionCamacho"/>
+   </widget>
+   <widget class="QMenu" name="menuConsejo_de_Profesores">
+    <property name="title">
+     <string>Consejo de Profesores</string>
+    </property>
     <addaction name="actionJesucristo"/>
     <addaction name="actionAlfonso"/>
     <addaction name="actionPaco"/>
-    <addaction name="actionDJ_Azael"/>
-    <addaction name="actionHector"/>
     <addaction name="actionRoberto"/>
     <addaction name="actionAbel"/>
-    <addaction name="actionSanti"/>
-    <addaction name="actionCarmen"/>
     <addaction name="actionTorresano"/>
-    <addaction name="actionCamacho"/>
     <addaction name="actionCarmelo"/>
     <addaction name="actionJulio"/>
    </widget>
    <addaction name="menuArchivo"/>
+   <addaction name="menuConsejo_de_Profesores"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -499,10 +505,10 @@
      <normaloff>:/images/julio.png</normaloff>:/images/julio.png</iconset>
    </property>
    <property name="text">
-    <string>Julio</string>
+    <string>Hulio</string>
    </property>
    <property name="toolTip">
-    <string>Julio</string>
+    <string>Hulio</string>
    </property>
   </action>
  </widget>
