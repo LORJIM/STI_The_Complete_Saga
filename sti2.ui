@@ -466,7 +466,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>550</y>
+      <y>570</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -549,7 +549,7 @@
     <property name="geometry">
      <rect>
       <x>800</x>
-      <y>550</y>
+      <y>570</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -618,27 +618,33 @@
    <widget class="QLabel" name="labelIMG2DESC">
     <property name="geometry">
      <rect>
-      <x>76</x>
-      <y>473</y>
-      <width>421</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelIMGDESC">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>350</y>
-      <width>301</width>
+      <x>80</x>
+      <y>540</y>
+      <width>431</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelIMGDESC">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>530</y>
+      <width>491</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
   </widget>
