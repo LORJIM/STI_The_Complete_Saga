@@ -60,6 +60,7 @@ private:
     void loadVideo(QUrl url);
     QString serie;
     int capitulo;
+    Player *player=new Player();
     QJsonArray capitulos;
     void loadPlayer(int tipo);
 };

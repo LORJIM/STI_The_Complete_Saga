@@ -21,6 +21,8 @@ private slots:
 
     void on_pushButton_16_clicked();
 
+    void on_actionAtras_triggered();
+
 private:
     Ui::gallery *ui;
     void loadImagen(int imagen);

@@ -13,6 +13,7 @@ listWidget::listWidget(QWidget *parent, QString entrega, QString arco, bool gale
     ui->setupUi(this);
 
     if(galeria){ //galeria de imagenes
+        this->setWindowTitle("Galería de imágenes");
         this->imagenes=QJsonArray(); //galeria multimedia resetea array
         QString path=QCoreApplication::applicationDirPath()+"/images/"+(entrega!=nullptr ? entrega : "OBRAS_AMOROS")+"/"+(arco!=nullptr ? arco+"/" : ""); //directorio donde estan los videos
         QDir source(path);
@@ -45,6 +46,10 @@ listWidget::listWidget(QWidget *parent, QString entrega, QString arco, bool gale
 
 }
 
+void listWidget::closeEvent(QCloseEvent *e){ //cerrar galeria cuando cerremos la modal
+    this->galeria->~gallery();
+}
+
 listWidget::~listWidget()
 {
     delete ui;
@@ -54,8 +59,8 @@ void listWidget::on_listWidget_2_itemClicked(QListWidgetItem *item) //'zoom' de 
 {
     if(!this->imagenes.empty()){ //galeria multimedia
         //stacked widget con la galeria de imagenes, le pasamos el array y la row de la imagen actual
-        gallery *galeria=new gallery(nullptr, this->imagenes, ui->listWidget_2->row(item));
-        galeria->show();
+        this->galeria=new gallery(nullptr, this->imagenes, ui->listWidget_2->row(item));
+        this->galeria->show();
 //      QMessageBox::about(this,"Coña",item->data(1).toString());
     }else QMessageBox::about(this,"Coña",item->text());
 

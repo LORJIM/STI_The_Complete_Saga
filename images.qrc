@@ -5,7 +5,6 @@
         <file>images/camacho.png</file>
         <file>images/carmelo.png</file>
         <file>images/carmen.png</file>
-        <file>images/Doraemonguer_y_sus_amijos.jpg</file>
         <file>images/Georgie.png</file>
         <file>images/julio.png</file>
         <file>images/santi.png</file>
@@ -13,5 +12,21 @@
         <file>images/torresano.png</file>
         <file>images/STI2_Title.png</file>
         <file>images/STI3_Title.png</file>
+        <file>images/STI1_2.jpg</file>
+        <file>images/STI1_3.jpg</file>
+        <file>images/STI2_1.jpg</file>
+        <file>images/STI2_2.jpg</file>
+        <file>images/STI3.jpg</file>
+        <file>images/STI1_1.JPG</file>
+        <file>images/STI2_3.jpg</file>
+        <file>images/STI2_4.JPG</file>
+        <file>images/epilogo.jpg</file>
+        <file>images/epilogoAbel.jpg</file>
+        <file>images/epilogoHeroes.jpg</file>
+        <file>images/epilogoRoberto.jpg</file>
+        <file>images/epilogoJorge.jpg</file>
+        <file>images/epilogoPaco.jpg</file>
+        <file>images/STI3_1.jpg</file>
+        <file>images/STI3_2.JPG</file>
     </qresource>
 </RCC>

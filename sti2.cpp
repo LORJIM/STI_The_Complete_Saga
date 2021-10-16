@@ -5,6 +5,7 @@
 #include <QJsonObject>
 #include <QDir>
 #include <QFileInfo>
+#include <QMovie>
 
 STI2::STI2(QWidget *parent) :
     QStackedWidget(parent),
@@ -58,9 +59,11 @@ void STI2::loadMiniSerie(QString serie){
     query.exec("SELECT * FROM MINISERIES WHERE SUBSTR(ID,1,1) LIKE "+serie); //select de los caps de la serie
     while(query.next()){ //los vamos guardando en el array
         //primero buscamos las imagenes y su desc en local
-        //IMPORTANTE: QUE SEAN TODAS JPG PARA EVITAR CONTROLES ADICIONALES
+        //IMPORTANTE: QUE SEAN TODAS JPG O GIF PARA EVITAR CONTROLES ADICIONALES
         QFileInfo img1(path+QString::number(capitulo)+"1.jpg");
+        QFileInfo img1GIF(path+QString::number(capitulo)+"1.gif");
         QFileInfo img2(path+QString::number(capitulo)+"2.jpg");
+        QFileInfo img2GIF(path+QString::number(capitulo)+"2.gif");
 
         // use initializer list to construct QJsonObject (asignamos valores
         auto data1 = QJsonObject(
@@ -68,8 +71,8 @@ void STI2::loadMiniSerie(QString serie){
         qMakePair(QString("SERIE"), query.value("SERIE").toString()),
         qMakePair(QString("CAP"), query.value("CAP").toString()),
         qMakePair(QString("DESC"), query.value("DESC").toString()),
-        qMakePair(QString("IMG"), (img1.exists() ? img1.absoluteFilePath() : "")),
-        qMakePair(QString("IMG2"),(img2.exists() ? img2.absoluteFilePath() : "")),
+        qMakePair(QString("IMG"), (img1.exists() ? img1.absoluteFilePath() : (img1GIF.exists() ? img1GIF.absoluteFilePath() : ""))),
+        qMakePair(QString("IMG2"),(img2.exists() ? img2.absoluteFilePath() : (img2GIF.exists() ? img2GIF.absoluteFilePath() : ""))),
         qMakePair(QString("IMGDESC"), query.value("IMGDESC").toString()),
         qMakePair(QString("IMG2DESC"), query.value("IMG2DESC").toString())
         });
@@ -93,16 +96,35 @@ void STI2::loadCapitulo(int capitulo){
     ui->labelCAP->setText(this->capitulos.at(capitulo).toObject().value("CAP").toString());
     ui->labelDESC->setText(this->capitulos.at(capitulo).toObject().value("DESC").toString());
     auto img1=this->capitulos.at(capitulo).toObject().value("IMG");
-    if(!img1.isNull()){
-        QPixmap pix(img1.toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
-        ui->labelIMG->setPixmap(pix); //seteamos la imagen
+    if(img1!=""){
+        QString img1String=img1.toString();
+        if(img1String.endsWith("jpg")){
+            QPixmap pix(img1String); //accedemos a la imagen con la ruta de recursos de la columna Image
+            ui->labelIMG->setPixmap(pix); //seteamos la imagen
+        }else if(img1String.endsWith("gif")){ //si es gif el proceso es diferente
+            QMovie *movie = new QMovie(img1String);
+            ui->labelIMG->setMovie(movie);
+            movie->start();
+        }
+    }else{
+        ui->labelIMG->clear();
     }
 
     auto img2=this->capitulos.at(capitulo).toObject().value("IMG2");
-    if(!img2.isNull()){
-        QPixmap pix(img2.toString()); //accedemos a la imagen con la ruta de recursos de la columna Image
-        ui->labelIMG2->setPixmap(pix); //seteamos la imagen
+    if(img2!=""){
+        QString img2String=img2.toString();
+        if(img2String.endsWith("jpg")){
+            QPixmap pix(img2String); //accedemos a la imagen con la ruta de recursos de la columna Image
+            ui->labelIMG2->setPixmap(pix); //seteamos la imagen
+        }else if(img2String.endsWith("gif")){ //si es gif el proceso es diferente
+            QMovie *movie = new QMovie(img2String);
+            ui->labelIMG2->setMovie(movie);
+            movie->start();
+        }
+    }else{
+        ui->labelIMG2->clear();
     }
+
 
     auto img1Desc=this->capitulos.at(capitulo).toObject().value("IMGDESC");
     if(!img1Desc.isNull())
@@ -144,11 +166,12 @@ void STI2::on_pushButton_7_clicked() //listado de chorradas
 }
 
 void STI2::loadVideo(QUrl url){ //funcion comun para reproducir videos de rapunsen
-    Player *player = new Player;
+    this->player->~Player(); //quitamos el anterior video si ya hay uno abierto
+    this->player=new Player();
     QList<QUrl> list = { url };
-    player->addToPlaylist(list);
-    player->show();
-    player->play();
+    this->player->addToPlaylist(list);
+    this->player->show();
+    this->player->play(); //lo reproducimos automaticamente fullscreen
 }
 
 void STI2::on_pushButton_10_clicked() //rapunsen 1

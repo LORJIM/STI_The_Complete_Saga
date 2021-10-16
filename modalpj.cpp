@@ -32,19 +32,38 @@ modalPJ::modalPJ(QWidget *parent, QString idpj) :
         }
     }
 
-    if(idpj!="2"){ //escondemos el boton de obras de amoros para el restos de PJs
-        //musica para paco xD
-        if(idpj=="6"){
+    switch(idpj.toInt()){
+        case 6:{ //musica para paco xD
             QMediaPlaylist *playlist = new QMediaPlaylist();
             playlist->addMedia(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/music/pasodoble.wav"));
             playlist->setPlaybackMode(QMediaPlaylist::Loop); //la ponemos en bucle para evitar que solo se reproduzca una vez
 
             this->music->setPlaylist(playlist);
             this->music->play();
-        }
+            break;
+        };
+        case 7:{ //musica para azael
+            QMediaPlaylist *playlist = new QMediaPlaylist();
+            playlist->addMedia(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/music/STI1/PTT-20171103-WA0006.opus"));
+            playlist->setPlaybackMode(QMediaPlaylist::Loop); //la ponemos en bucle para evitar que solo se reproduzca una vez
+
+            this->music->setPlaylist(playlist);
+            this->music->play();
+            break;
+        };
+        case 8:{ //hector
+            QMediaPlaylist *playlist = new QMediaPlaylist();
+            playlist->addMedia(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/music/STI2/'Que_pasa_chavaleeees'_Hector.m4a"));
+
+            this->music->setPlaylist(playlist);
+            this->music->play();
+            break;
+        };
+    };
+
+    if(idpj!="2"){//escondemos el boton de obras de amoros para todos los PJs salvo dani
         ui->buttonObras->hide();
     }
-
 }
 
 void modalPJ::closeEvent(QCloseEvent *e){ //parar la musica cuando cerremos la modal

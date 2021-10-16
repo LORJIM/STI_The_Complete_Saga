@@ -86,23 +86,12 @@ void STI3::on_pushButton_11_clicked() //galeria de imagenes Arco 1
 }
 
 
-void STI3::on_pushButton_12_clicked() //galeria de videos Arco 1
-{
-    loadPlayer(1,1);
-}
-
-
 void STI3::on_pushButton_15_clicked() //imagenes Arco 3
 {
     listWidget *listado=new listWidget(nullptr,"STI3","3",true);
     listado->show();
 }
 
-
-void STI3::on_pushButton_14_clicked() //videos Arco 3
-{
-    loadPlayer(1,3);
-}
 
 void STI3::loadPlayer(int tipo, int arco){
     QString path=QCoreApplication::applicationDirPath()+(tipo==0 ? "/music" : "/videos")+"/STI3/"+arco+"/"; //directorio donde estan los archivos
@@ -124,3 +113,25 @@ void STI3::loadPlayer(int tipo, int arco){
     player->addToPlaylist(listaReprod);
     player->show(); //inicializamos el reproductor
 }
+
+void STI3::on_pushButton_12_clicked() //dedicatoria
+{
+    this->setCurrentIndex(5);
+    QMediaPlaylist *playlist = new QMediaPlaylist();
+    playlist->addMedia(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/music/sad.mp3"));
+    playlist->setPlaybackMode(QMediaPlaylist::Loop); //la ponemos en bucle para evitar que solo se reproduzca una vez
+
+    this->music->setPlaylist(playlist);
+    this->music->play();
+}
+
+void STI3::closeEvent(QCloseEvent *e){ //parar la musica cuando cerremos la modal
+    this->music->stop();
+}
+
+void STI3::on_pushButton_13_clicked()
+{
+    this->music->stop();
+    this->setCurrentIndex(4);
+}
+

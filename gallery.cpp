@@ -2,6 +2,7 @@
 #include "ui_gallery.h"
 #include <QJsonObject>
 #include <QMovie>
+#include <QShortcut>
 
 gallery::gallery(QWidget *parent, QJsonArray imagenes, int imagenActual) :
     QStackedWidget(parent),
@@ -9,6 +10,12 @@ gallery::gallery(QWidget *parent, QJsonArray imagenes, int imagenActual) :
     imagenes(imagenes)
 {
     ui->setupUi(this);
+
+    //shortcuts para navegar con flechas
+    QShortcut *shortcut = new QShortcut(QKeySequence("Left"), this);
+    QObject::connect(shortcut, SIGNAL(activated()), this, SLOT(on_pushButton_8_clicked()));
+    QShortcut *shortcut2 = new QShortcut(QKeySequence("Right"), this);
+    QObject::connect(shortcut2, SIGNAL(activated()), this, SLOT(on_pushButton_16_clicked()));
 
     loadImagen(imagenActual);
 
@@ -49,12 +56,18 @@ gallery::~gallery()
 
 void gallery::on_pushButton_8_clicked() //anterior imagen
 {
-    this->loadImagen(this->imagen-1);
+    if(this->imagen>0) this->loadImagen(this->imagen-1); //con este if controlamos que los shortcuts no avancen tampoco
 }
 
 
 void gallery::on_pushButton_16_clicked() //siguiente imagen
 {
-    this->loadImagen(this->imagen+1);
+    if(this->imagen+1<this->imagenes.count()) this->loadImagen(this->imagen+1); //con este if controlamos que los shortcuts no avancen tampoco
+}
+
+
+void gallery::on_actionAtras_triggered()
+{
+    this->loadImagen(this->imagen-1);
 }
 

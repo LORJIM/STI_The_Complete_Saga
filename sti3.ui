@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>940</width>
-    <height>650</height>
+    <height>711</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -43,7 +43,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>290</y>
+      <y>380</y>
       <width>843</width>
       <height>62</height>
      </rect>
@@ -184,6 +184,44 @@
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>160</y>
+      <width>261</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/STI3.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>160</y>
+      <width>461</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tras muchos obstáculos, nuestros héroes lograron vencer a las redes de Jesús y empredieron la marcha, más allá de los dominios del Satafi, hacia una nueva aventura, las prácticas.&lt;/p&gt;&lt;p&gt;Pero...aún no había terminado. Algunos camaradas del STI seguían cumpliendo condena en el castillo de Jesús y, el resto, aún debían superar ciertos desafíos para derrotar, de una vez por todas, al malvado Consejo de Profesores.&lt;/p&gt;&lt;p&gt;Jesús removerá cielo y tierra para impedir que los miserables se salgan con la suya, otra vez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QWidget" name="page_2">
    <property name="minimumSize">
@@ -243,7 +281,7 @@
       <x>40</x>
       <y>100</y>
       <width>461</width>
-      <height>271</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -260,7 +298,7 @@
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>410</y>
+      <y>450</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -286,7 +324,7 @@
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>450</y>
+      <y>490</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -295,17 +333,23 @@
      <string>Galería de imágenes</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_12">
+   <widget class="QLabel" name="label_36">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>490</y>
-      <width>121</width>
-      <height>31</height>
+      <x>530</x>
+      <y>40</y>
+      <width>261</width>
+      <height>381</height>
      </rect>
     </property>
     <property name="text">
-     <string>Galería de vídeos</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/STI3_1.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -359,7 +403,7 @@
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>490</y>
+      <y>560</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -391,7 +435,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>200</y>
+      <y>130</y>
       <width>541</width>
       <height>51</height>
      </rect>
@@ -415,7 +459,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>250</y>
+      <y>180</y>
       <width>61</width>
       <height>20</height>
      </rect>
@@ -433,7 +477,7 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>250</y>
+      <y>180</y>
       <width>61</width>
       <height>20</height>
      </rect>
@@ -451,7 +495,7 @@
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>250</y>
+      <y>180</y>
       <width>201</width>
       <height>20</height>
      </rect>
@@ -469,13 +513,77 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>490</y>
+      <y>560</y>
       <width>111</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string>Atrás</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>240</y>
+      <width>801</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Amorós pensaba que se había salido con la suya, pero estaba muy equivocado, el infierno solo acababa de empezar. Para empezar, su empresa se encuentra muy lejos de su hogar, y del resto del mundo, en un poligono entre leganes y carabanchel, que tiene parada de ida, pero no de vuelta xD. Para llegar allí, amoros tiene que hacer multiples transbordos(una especia de triatlon pero de transporte publico) y para volver tiene que ir hasta madrid, y volver desde alli. El resultado es que Amoros esta, practicamente, de 8 a 8. &lt;/p&gt;&lt;p&gt;Segundo, en su empresa hay mal rollo, la poca plantilla que hay esta explotada, y los becarios como amoros a veces son forzados a hacer horas extras. &lt;/p&gt;&lt;p&gt;Tercero, el compañero de Amoros (crisostomo) es el tio mas frio de la tierra, y no le da conversacion, ademas de dejarle mierda cerca de su escritorio. La jornada se hace dura con un tio tan antipatico y cinico, y amoros no esta a gusto. &lt;/p&gt;&lt;p&gt;Cuarto, las tutorias, los unicos dias en los que Amoros tiene su redencion en su infierno de vida, tambien le son arrebatados. Le asignan la tutoria con julio a las tres de la tarde, impidiendo a amoros ver a sus compañeros y partiéndole el día. &lt;/p&gt;&lt;p&gt;Quinto, entre los becarios hay un traidor, que chiva todo a los ejecutivos. A causa de esto, el jefe acusa a Amoros de pirateria e invasión de la privacidad, acto seguido, coge el telefono rojo para llamar a Alfonso, el cual, no tiene mas remedio que tomar la decision de expulsar a Amoros de las practicas y mandarle para septiembre, debido a los inaceptables actos cometidos en la empresa. &lt;/p&gt;&lt;p&gt;Ademas, se baraja la idea de llevar a Amoros ante las autoridades, por delito de pirateria y violación de la privacidad laboral, pero al final esta idea no salió adelante. Por suerte, Amoros, oliéndose lo que se le venía encima, actuó rápido. Sorprendiendo a Jaime y sus antiguos compañeros, se presentó como un héroe en el primer día de tutoría y habló con Alfonso, para eludir la, hasta el momento, inevitable expulsión. &lt;/p&gt;&lt;p/&gt;&lt;p&gt;Actualmente, Amoros trata por todos los medios que le concedan la tutoria con el resto de sus compañeros, ya que sabe que sólo en esos dias tendrá la oportunidad de salir, o por lo menos, hacer más ameno el infierno de las practicas. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>210</y>
+      <width>441</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>El infierno de Amorós en Eurodescontrol</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_37">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>40</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/STI3_2.JPG</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -608,7 +716,7 @@
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/paco_6jg_icon.ico&quot;/&gt;&lt;span style=&quot; color:#5500ff;&quot;&gt;RESULTADO DEL PROYECTO&lt;/span&gt;&lt;img src=&quot;:/icons/alfon_bS8_icon.ico&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/paco_6jg_icon.ico&quot;/&gt;&lt;span style=&quot; color:#5500ff;&quot;&gt;RESULTADO DEL PROYECTO&lt;/span&gt;&lt;img src=&quot;:/icons/paco_6jg_icon.ico&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -654,23 +762,10 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_14">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>560</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Galería de vídeos</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_15">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>390</x>
       <y>560</y>
       <width>121</width>
       <height>31</height>
@@ -712,17 +807,12 @@
      <rect>
       <x>40</x>
       <y>70</y>
-      <width>611</width>
-      <height>231</height>
+      <width>461</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>-LA SAGA STI3 TERMINA CON NUESTROS PROTAS GANANDO EL TÍTULO MUNDIAL DE FP
--LOS PROFES ACABAN EN LA MIERDA ROBERTO KILLED JESUS RETIRED EN LA RESIDENCIA NEW HORIZONS Y PACO SUMIDO EN LA DESGRACIA CON UNA GRAN DEPRESIÓN POST TRAUMÁTICA
--ABEL SE DEJA EL PELO DE KRUSTY Y ESTÁ BUSCANDO A HÉCTOR POR EL GLOBO DURANTE TODA LA ETERNIDAD Y VA PREGUNTANDO A LA GENTE, PERO NADIE LE HACE CASO
--LE VES VIAJANDO POR LA INDIA, EN HONG KONG, EN EL TIBET, CON LOS OMATICAYA AVATAR 2, FINALMENTE LO ENCONTRÓ EN UNA CAVERNA DE LA ANTÁRTIDA, EN MEDIO DE LA VENTISCA INVERNAL, Y PUDO APROBARLE, ABEL HABÍA CUMPLIDO SU MISIÓN.
--JORGE SE VA A LAS PRÁCTICAS SPIN-OFF TARDÍO PORQUE LA SAGA ORIGINAL YA TERMINÓ, NO SE RECAUDE MUCHO DINERO, ES MÁS LA SAGA SE CANCELA POR FALTA DE FONDOS
-</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;-LA SAGA STI3 TERMINA CON NUESTROS PROTAS GANANDO EL TÍTULO MUNDIAL DE FP&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -735,7 +825,263 @@
     <property name="geometry">
      <rect>
       <x>80</x>
+      <y>640</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atrás</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>640</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>?</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_26">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>360</y>
+      <width>371</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/epilogoAbel.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_27">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>20</y>
+      <width>171</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/epilogoHeroes.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_28">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
       <y>480</y>
+      <width>201</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/epilogoJorge.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_29">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>130</y>
+      <width>171</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/epilogoPaco.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_30">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>160</y>
+      <width>181</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/epilogoRoberto.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_31">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>130</y>
+      <width>461</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;-LOS PROFES ACABAN EN LA MIERDA ROBERTO KILLED JESUS RETIRED EN LA RESIDENCIA NEW HORIZONS Y PACO SUMIDO EN LA DESGRACIA CON UNA GRAN DEPRESIÓN POST TRAUMÁTICA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_32">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>330</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paco dando una entrevista a televisión sobre lo sucedido en STI&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_33">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>290</y>
+      <width>461</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;-ABEL SE DEJA EL PELO DE KRUSTY Y ESTÁ BUSCANDO A HÉCTOR POR EL GLOBO DURANTE TODA LA ETERNIDAD Y VA PREGUNTANDO A LA GENTE, PERO NADIE LE HACE CASO&lt;/p&gt;&lt;p&gt;-LE VES VIAJANDO POR LA INDIA, EN HONG KONG, EN EL TIBET, CON LOS OMATICAYA AVATAR 2, FINALMENTE LO ENCONTRÓ EN UNA CAVERNA DE LA ANTÁRTIDA, EN MEDIO DE LA VENTISCA INVERNAL, Y PUDO APROBARLE, ABEL HABÍA CUMPLIDO SU MISIÓN.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_34">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>600</y>
+      <width>391</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abel persiguiendo a Héctor por el Himalaya.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_35">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>430</y>
+      <width>441</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;-JORGE SE VA A LAS PRÁCTICAS SPIN-OFF TARDÍO PORQUE LA SAGA ORIGINAL YA TERMINÓ, NO SE RECAUDE MUCHO DINERO, ES MÁS LA SAGA SE CANCELA POR FALTA DE FONDOS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="page_6">
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>60</y>
+      <width>401</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/epilogo.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_25">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>300</y>
+      <width>551</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;App dedicada a todos aquellos que estuvieron con nosotros en el STI, los años más divertidos de mi vida (al menos hasta ahora, 2021), y en especial, a Dani, un gran amigo y compañero desde entonces.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;¡Gracias a todos!&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Copyright L0RJiM 2021, todos los derechos reservados.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_13">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>510</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -747,8 +1093,8 @@
   </widget>
  </widget>
  <resources>
-  <include location="iconos.qrc"/>
   <include location="images.qrc"/>
+  <include location="iconos.qrc"/>
  </resources>
  <connections/>
 </ui>
